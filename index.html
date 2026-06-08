@@ -1,0 +1,1056 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ezgi Kaya | Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #0a0f1e;
+  --bg-light: #131a2e;
+  --card: #1a2237;
+  --border: #2a3454;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #7c3aed;
+  --accent2: #38bdf8;
+  --gradient: linear-gradient(135deg, #7c3aed 0%, #38bdf8 100%);
+}
+
+body.light {
+  --bg: #f8fafc;
+  --bg-light: #ffffff;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #475569;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+/* ARKAPLAN ANİMASYONU */
+.bg-blob {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.3;
+  z-index: -1;
+  animation: float 20s ease-in-out infinite;
+}
+
+.bg-blob.one {
+  background: #7c3aed;
+  top: -150px;
+  left: -150px;
+}
+
+.bg-blob.two {
+  background: #38bdf8;
+  bottom: -150px;
+  right: -150px;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(50px, 50px); }
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 15, 30, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+body.light nav {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.nav-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent2);
+}
+
+.theme-toggle {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
+  border-color: var(--accent2);
+}
+
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+}
+
+/* CONTAINER */
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* HERO */
+header {
+  padding: 100px 0 80px;
+  text-align: center;
+  animation: fadeUp 0.8s ease;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--accent2);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.badge .dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+header h1 {
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+header h1 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .subtitle {
+  font-size: clamp(18px, 2.5vw, 22px);
+  color: var(--muted);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.intro {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.5);
+}
+
+.btn-secondary {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent2);
+  transform: translateY(-3px);
+}
+
+/* SECTION */
+section {
+  padding: 60px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-title span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--accent2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(56, 189, 248, 0.15);
+}
+
+/* HAKKIMDA */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-num {
+  font-size: 36px;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.skill-card h3 {
+  font-size: 16px;
+  color: var(--accent2);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.project {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.4s;
+}
+
+.project:hover::before {
+  transform: scaleX(1);
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent2);
+  box-shadow: 0 16px 40px rgba(56, 189, 248, 0.15);
+}
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.project h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent2);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* EDUCATION */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.edu-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.edu-card .date {
+  color: var(--accent2);
+  font-size: 13px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  color: var(--muted);
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+}
+
+.list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent2);
+}
+
+/* CERTIFICATES */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.cert {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: 0.3s;
+}
+
+.cert:hover {
+  border-color: var(--accent2);
+  transform: translateY(-3px);
+}
+
+.cert-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--gradient);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.cert-info h4 {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.cert-info p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* LANGUAGES */
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.lang {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.lang-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.lang-bar {
+  background: var(--bg);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.lang-progress {
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 999px;
+  transition: width 1s ease;
+}
+
+/* CONTACT */
+.contact-card {
+  text-align: center;
+  padding: 40px 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.contact-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ARKAPLAN BLOBLARI -->
+<div class="bg-blob one"></div>
+<div class="bg-blob two"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">EZGI.dev</div>
+    <ul class="nav-links">
+      <li><a href="#about">Hakkımda</a></li>
+      <li><a href="#skills">Yetenekler</a></li>
+      <li><a href="#projects">Projeler</a></li>
+      <li><a href="#education">Eğitim</a></li>
+      <li><a href="#contact">İletişim</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header>
+  <div class="container">
+    <div class="badge">
+      <span class="dot"></span>
+      Frontend Stajı Arıyorum
+    </div>
+    <h1>Merhaba, ben <span>Ezgi Kaya</span></h1>
+    <p class="subtitle">Frontend Developer & Bilgisayar Programlama Öğrencisi</p>
+    <p class="intro">
+      Modern web teknolojileri (React, Node.js) ve veritabanı yönetimi üzerine
+      kendimi geliştiriyorum. Kullanıcı dostu ve güvenli web uygulamaları
+      tasarlayıp geliştirmeyi seviyorum.
+    </p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#contact">
+        İletişime Geç →
+      </a>
+      <a class="btn btn-secondary" href="#projects">
+        Projeleri Gör
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HAKKIMDA -->
+<section id="about">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Hakkımda <span>.</span></h2>
+      <p class="section-sub">Kim olduğum hakkında biraz bilgi</p>
+    </div>
+
+    <div class="about-grid reveal">
+      <div class="card">
+        <h3 style="margin-bottom: 14px; color: var(--accent2);">👩‍💻 Geliştirici Profilim</h3>
+        <p style="color: var(--muted);">
+          Yazılım geliştirme sürecinde hem teknik yeterliliğe hem de kullanıcı deneyimine önem veriyorum.
+          Özellikle frontend geliştirme, veri yönetimi ve web güvenliği konularına ilgi duyuyorum.
+          Öğrenmeye açık, detaylara dikkat eden ve problem çözmeye odaklı bir yapıya sahibim.
+        </p>
+      </div>
+
+      <div class="card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div class="stat">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Kişisel Proje</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Sertifika</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Teknoloji</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Dil</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YETENEKLER -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Teknik <span>Yetenekler</span></h2>
+      <p class="section-sub">Kullandığım teknolojiler ve araçlar</p>
+    </div>
+
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <h3>🎨 Frontend</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>⚙️ Backend</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">bcrypt</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>🗄️ Veritabanı</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>💻 Programlama Dilleri</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>🔐 Güvenlik</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL Injection</span>
+          <span class="skill-tag">XSS</span>
+          <span class="skill-tag">GDPR</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>🌟 Soft Skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Problem Çözme</span>
+          <span class="skill-tag">Takım Çalışması</span>
+          <span class="skill-tag">Analitik Düşünme</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJELER -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Projelerim <span>.</span></h2>
+      <p class="section-sub">Üzerinde çalıştığım kişisel projeler</p>
+    </div>
+
+    <div class="projects reveal">
+      <div class="project">
+        <div class="project-icon">🛒</div>
+        <h3>AI Destekli E-Ticaret Uygulaması</h3>
+        <p>
+          Full-stack bir e-ticaret platformu. JWT ile güvenli kullanıcı doğrulama,
+          Redis ile performans optimizasyonu ve MySQL ile veri yönetimi içerir.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">Express</span>
+          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">JWT</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">🎬</div>
+        <h3>Kişisel Film Kütüphanesi</h3>
+        <p>
+          SQLite tabanlı kişisel film arşiv sistemi. Kullanıcılar filmleri izlenme
+          durumlarına ve türlerine göre kolayca filtreleyebilir.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">🧩</div>
+        <h3>Rubik Küp Çözüm Web Sitesi</h3>
+        <p>
+          Tam responsive algoritma rehberi platformu. İnteraktif kronometre,
+          dark/light tema desteği (localStorage) ve özel form doğrulama içerir.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">localStorage</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-icon">🛡️</div>
+        <h3>Web Güvenliği Analiz Raporu</h3>
+        <p>
+          SQL Injection ve XSS gibi güvenlik açıklarını inceleyen ve GDPR uyumluluğunu
+          değerlendiren detaylı bir siber güvenlik analiz çalışması.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Cyber Security</span>
+          <span class="tech-tag">SQL Injection</span>
+          <span class="tech-tag">XSS</span>
+          <span class="tech-tag">GDPR</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EĞİTİM -->
+<section id="education">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Eğitim <span>&</span> Sertifikalar</h2>
+      <p class="section-sub">Akademik geçmişim ve aldığım sertifikalar</p>
+    </div>
+
+    <div class="edu-grid reveal" style="margin-bottom: 30px;">
+      <div class="card edu-card">
+        <h3>🎓 İstanbul Bilgi Üniversitesi</h3>
+        <p class="date">Bilgisayar Programlama | 02/2026 - Devam Ediyor</p>
+        <ul class="list">
+          <li>SQL, Java, C, Python</li>
+          <li>HTML5, CSS3</li>
+          <li>Cyber Security</li>
+          <li>Web Front-End ve Back-End</li>
+          <li>Software Development Techniques</li>
+        </ul>
+      </div>
+
+      <div class="card edu-card">
+        <h3>🎓 Yaşar Üniversitesi</h3>
+        <p class="date">Bilgisayar Programlama | 09/2025 - 01/2026</p>
+        <ul class="list">
+          <li>Python Programlama</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cert-grid reveal">
+      <div class="cert">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>HTML Essentials</h4>
+          <p>CISCO</p>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>CSS Certificate</h4>
+          <p>HACKERRANK</p>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Frontend Developer (React)</h4>
+          <p>HACKERRANK</p>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Python Essentials 1</h4>
+          <p>CISCO</p>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon">📜</div>
+        <div class="cert-info">
+          <h4>Python Essentials 2</h4>
+          <p>CISCO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DİLLER -->
+<section>
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">Diller <span>.</span></h2>
+      <p class="section-sub">Konuştuğum diller</p>
+    </div>
+
+    <div class="lang-grid reveal">
+      <div class="lang">
+        <div class="lang-name">
+          <span>🇹🇷 Türkçe</span>
+          <span>Ana Dil</span>
+        </div>
+        <div class="lang-bar"><div class="lang-progress" style="width: 100%;"></div></div>
+      </div>
+
+      <div class="lang">
+        <div class="lang-name">
+          <span>🇬🇧 İngilizce</span>
+          <span>İyi Seviye</span>
+        </div>
+        <div class="lang-bar"><div class="lang-progress" style="width: 80%;"></div></div>
+      </div>
+
+      <div class="lang">
+        <div class="lang-name">
+          <span>🇷🇺 Rusça</span>
+          <span>Orta Seviye</span>
+        </div>
+        <div class="lang-bar"><div class="lang-progress" style="width: 60%;"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-card reveal">
+      <h2>Birlikte <span style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Çalışalım</span> 🚀</h2>
+      <p>Frontend stajı, proje iş birliği veya sadece merhaba demek için bana ulaşabilirsiniz!</p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="mailto:ezgiberat2007@gmail.com">
+          📧 Mail Gönder
+        </a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/ezggiwin" target="_blank">
+          💼 LinkedIn
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <a href="mailto:ezgiberat2007@gmail.com">📧 ezgiberat2007@gmail.com</a>
+        <a href="#">📍 İstanbul, Türkiye</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Ezgi Kaya — Tüm hakları saklıdır. ❤️ ile yapıldı.</p>
+  </div>
+</footer>
+
+<script>
+// TEMA DEĞİŞTİR
+function toggleTheme() {
+  document.body.classList.toggle('light');
+  const btn = document.querySelector('.theme-toggle');
+  btn.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
+  localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+}
+
+// Tema hatırlat
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light');
+  document.querySelector('.theme-toggle').textContent = '☀️';
+}
+
+// SCROLL ANİMASYONU
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
