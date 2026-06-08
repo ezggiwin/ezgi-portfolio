@@ -1,0 +1,297 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zeka küpleri çözüm rehberi - Rubik küpü, Mirror Cube ve daha fazlası">
+    <meta name="keywords" content="zeka küpü, rubik küp, mirror cube, megaminx, kilominx, çözüm">
+    <meta name="author" content="Öğrenci Adı Soyadı">
+    <title>Zeka Küpleri Çözüm Rehberi | Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="sayfa-basi">
+        <div class="header-icerik">
+            <h1>🧩 Zeka Küpleri Çözüm Rehberi</h1>
+            <p class="slogan">Her küpün bir çözümü var — birlikte keşfedelim!</p>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="aktif">🏠 Ana Sayfa</a></li>
+            <li><a href="kupler.html">🎲 Küp Türleri</a></li>
+            <li><a href="cozumler.html">📖 Çözüm Rehberi</a></li>
+            <li><a href="iletisim.html">📬 İletişim</a></li>
+            <li><a href="#sikca-sorulan">❓ SSS</a></li>
+        </ul>
+    </nav>
+
+    <div class="tema-cubuk">
+        <span>🎨 Tema:</span>
+        <button id="btn-aydinlik" class="tema-btn aydinlik-btn">☀️ Aydınlık</button>
+        <button id="btn-karanlik" class="tema-btn karanlik-btn">🌙 Karanlık</button>
+        <button id="btn-mavi" class="tema-btn mavi-btn">🔵 Mavi</button>
+        <button id="btn-yesil" class="tema-btn yesil-btn">🟢 Yeşil</button>
+        <span id="tema-mesaj" class="tema-mesaj"></span>
+    </div>
+    <main>
+
+        <section class="hero-bolum">
+            <div class="hero-metin">
+                <h2>Zeka Küpleri Dünyasına Hoş Geldiniz!</h2>
+                <p>
+                    Bu site, <strong>zeka küplerini</strong> çözmeyi öğrenmek isteyen herkes için hazırlanmıştır.
+                    İster yeni başlayan olun ister deneyimli bir çözücü, burada <em>faydalı bilgiler</em>,
+                    <mark>adım adım çözüm rehberleri</mark> ve pratik ipuçları bulacaksınız.
+                </p>
+                <p>
+                    Rubik Küpü 1974 yılında Macar mimar <strong>Ernő Rubik</strong> tarafından icat edilmiştir.
+                    O günden bu yana milyonlarca insanın tutkusu haline gelen bu bulmaca, günümüzde
+                    onlarca farklı varyasyonuyla karşımıza çıkmaktadır.
+                </p>
+                <p>
+                    Sitemizde <strong>2x2, 3x3, 4x4, Pyraminx, Megaminx, Kilominx, Mirror Cube, Skewb</strong> ve
+                    daha birçok küpün detaylı çözüm rehberlerini bulabilirsiniz.
+                </p>
+            </div>
+            <div class="hero-gorsel">
+                <img src="images/3x3.jpg" alt="Klasik 3x3 Rubik Küpü görseli" class="ana-gorsel">
+                <p class="gorsel-kaynak"><em>Görsel Kaynak: Gancube</em></p>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="neden-bolum">
+            <h2>🧠 Zeka Küpleri Neden Faydalıdır?</h2>
+            <div class="fayda-kartlari">
+                <div class="kart">
+                    <h3>🎯 Problem Çözme</h3>
+                    <p>Karmaşık problemleri küçük adımlara bölmeyi öğretir. Algoritmik düşünme becerinizi geliştirir.</p>
+                </div>
+                <div class="kart">
+                    <h3>🧠 Hafıza Güçlendirme</h3>
+                    <p>Algoritmaları ezberlemek ve uygulamak, kısa ve uzun süreli hafızanızı güçlendirir.</p>
+                </div>
+                <div class="kart">
+                    <h3>✋ El-Göz Koordinasyonu</h3>
+                    <p>Hızlı parmak hareketleri ve görsel takip, motor becerilerinizi geliştirir.</p>
+                </div>
+                <div class="kart">
+                    <h3>😌 Stres Azaltma</h3>
+                    <p>Küp çözmek meditasyon etkisi yaratır, odaklanmayı artırır ve stresi azaltır.</p>
+                </div>
+                <div class="kart">
+                    <h3>🏆 Özgüven Artışı</h3>
+                    <p>Bir küpü ilk kez çözdüğünüzde hissedeceğiniz başarı duygusu, özgüveninizi yükseltir.</p>
+                </div>
+                <div class="kart">
+                    <h3>👥 Sosyal Bağlantılar</h3>
+                    <p>Speedcubing topluluğu dünya genelinde milyonlarca kişiden oluşur.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="populer-kupler">
+            <h2>🎲 Popüler Zeka Küpü Türleri</h2>
+            <p>Aşağıda en popüler zeka küpü türlerini bulabilirsiniz:</p>
+
+            <div class="kup-galeri">
+                <div class="kup-karti">
+                    <img src="images/3x3.jpg" alt="3x3 Rubik Küpü" class="kup-img">
+                    <h3>3x3 Rubik Küpü</h3>
+                    <p>En klasik zeka küpü. 43 kentilyon farklı kombinasyona sahiptir.</p>
+                </div>
+                <div class="kup-karti">
+                    <img src="images/rubik2x2.jpg" alt="2x2 Pocket Küp" class="kup-img">
+                    <h3>2x2 Pocket Küp</h3>
+                    <p>Başlangıç seviyesi için ideal küçük versiyon.</p>
+                </div>
+                <div class="kup-karti">
+                    <img src="images/mirror_cube.jpg" alt="Mirror Cube" class="kup-img">
+                    <h3>Mirror Cube</h3>
+                    <p>Renk yerine şekil farkıyla çözülen benzersiz küp.</p>
+                </div>
+                <div class="kup-karti">
+                    <img src="images/pyraminx.jpg" alt="Pyraminx" class="kup-img">
+                    <h3>Pyraminx</h3>
+                    <p>Piramit şeklinde, sezgisel çözümü olan eğlenceli bulmaca.</p>
+                </div>
+                <div class="kup-karti">
+                    <img src="images/megaminx.jpg" alt="Megaminx" class="kup-img">
+                    <h3>Megaminx</h3>
+                    <p>12 yüzlü, 3x3 bilgisiyle çözülebilen dev bulmaca.</p>
+                </div>
+                <div class="kup-karti">
+                    <img src="images/skewb.jpg" alt="Skewb" class="kup-img">
+                    <h3>Skewb</h3>
+                    <p>Köşelerden dönen, hızlı ve eğlenceli bir küp.</p>
+                </div>
+            </div>
+
+            <p class="devami">
+                Detaylı bilgi için <a href="kupler.html">Küp Türleri sayfasını</a> ziyaret edin.
+            </p>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="tablo-bolum">
+            <h2>📊 Küp Türleri Karşılaştırma Tablosu</h2>
+            <div class="tablo-kapsayici">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Küp Türü</th>
+                            <th>Yüz</th>
+                            <th>Parça</th>
+                            <th>Zorluk</th>
+                            <th>Ort. Süre (Başlangıç)</th>
+                            <th>Dünya Rekoru</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2x2 Pocket Küp</td><td>6</td><td>8</td><td>⭐ Kolay</td><td>2-5 dk</td><td>0.49 sn</td></tr>
+                        <tr><td>3x3 Rubik Küpü</td><td>6</td><td>26</td><td>⭐⭐ Orta</td><td>3-10 dk</td><td>3.13 sn</td></tr>
+                        <tr><td>4x4 Rubik Küpü</td><td>6</td><td>56</td><td>⭐⭐⭐ Zor</td><td>10-30 dk</td><td>16.79 sn</td></tr>
+                        <tr><td>Mirror Cube</td><td>6</td><td>26</td><td>⭐⭐ Orta</td><td>5-15 dk</td><td>15.52 sn</td></tr>
+                        <tr><td>Pyraminx</td><td>4</td><td>14</td><td>⭐ Kolay</td><td>1-3 dk</td><td>0.91 sn</td></tr>
+                        <tr><td>Megaminx</td><td>12</td><td>62</td><td>⭐⭐⭐ Zor</td><td>30-90 dk</td><td>27.22 sn</td></tr>
+                        <tr><td>Kilominx</td><td>12</td><td>32</td><td>⭐⭐ Orta</td><td>5-15 dk</td><td>13.80 sn</td></tr>
+                        <tr><td>Skewb</td><td>6</td><td>14</td><td>⭐ Kolay</td><td>1-3 dk</td><td>0.93 sn</td></tr>
+                        <tr><td>Square-1</td><td>6</td><td>21</td><td>⭐⭐⭐⭐ Çok Zor</td><td>15-45 dk</td><td>4.26 sn</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="tablo-not"><em>Kaynak: WCA (World Cube Association) verileri</em></p>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="ses-bolum">
+            <h2>🎵 Çözerken Dinle — Odaklanma Müziği</h2>
+            <p>Küp çözerken arka planda çalacak rahatlatıcı müzik:</p>
+            <audio controls>
+                <source src="media/odaklanma_muzigi.mp3" type="audio/mpeg">
+                Tarayıcınız ses oynatmayı desteklemiyor.
+            </audio>
+            <p class="gorsel-kaynak"><em>Ses Kaynağı: SoundHelix (Ücretsiz)</em></p>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="iframe-bolum">
+            <h2>📖 Rubik Küpü — Vikipedi</h2>
+            <p>Rubik Küpü hakkında detaylı bilgiyi aşağıdan okuyabilirsiniz:</p>
+            <div class="iframe-kapsayici">
+                <iframe
+                    src="https://tr.m.wikipedia.org/wiki/Rubik_k%C3%BCp%C3%BC"
+                    width="100%"
+                    height="480"
+                    style="border:2px solid #ddd; border-radius:12px;"
+                    title="Rubik Küpü Vikipedi Sayfası"
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p class="gorsel-kaynak"><em>Kaynak: Türkçe Vikipedi</em></p>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="ipucu-bolum">
+            <h2>💡 Günün İpucu</h2>
+            <p>Her tıklamada farklı bir çözüm ipucu:</p>
+            <button id="btn-ipucu" class="ipucu-btn">🎲 İpucu Göster</button>
+            <div id="ipucu-kutusu" class="ipucu-kutusu">
+                <p id="ipucu-metin">Butona tıklayarak günün ipucunu görebilirsiniz!</p>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="saat-bolum">
+            <h2>⏰ Canlı Saat ve Tarih</h2>
+            <p>Çözüm sürenizi takip etmek için:</p>
+            <div class="saat-gosterge">
+                <div id="canli-saat" class="canli-saat">Yükleniyor...</div>
+                <div id="canli-tarih" class="canli-tarih"></div>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="kronometre-bolum">
+            <h2>⏱️ Çözüm Kronometresi</h2>
+            <p>Küpünüzü ne kadar sürede çözdüğünüzü ölçün:</p>
+            <div class="kronometre-alan">
+                <div id="kronometre-ekran" class="kronometre-ekran">00:00:00</div>
+                <div class="kronometre-butonlari">
+                    <button id="btn-baslat" class="kron-btn baslat-btn">▶ Başlat</button>
+                    <button id="btn-durdur" class="kron-btn durdur-btn">⏸ Durdur</button>
+                    <button id="btn-sifirla" class="kron-btn sifirla-btn">🔄 Sıfırla</button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="sikca-sorulan" class="sss-bolum">
+            <h2>❓ Sıkça Sorulan Sorular</h2>
+
+            <div class="sss-item">
+                <button class="sss-soru" onclick="toggleSSS('cevap1')">Zeka küpü çözmeyi öğrenmek zor mu?</button>
+                <div id="cevap1" class="sss-cevap">
+                    <p>Hayır! 3x3 küpü çözmek göründüğünden çok daha kolaydır. Temel yöntemi öğrenmek birkaç saat sürer.</p>
+                </div>
+            </div>
+            <div class="sss-item">
+                <button class="sss-soru" onclick="toggleSSS('cevap2')">Hangi küple başlamalıyım?</button>
+                <div id="cevap2" class="sss-cevap">
+                    <p>3x3 Rubik Küpü ile başlamanızı öneririz. Öğrendiğiniz teknikler diğer tüm küplerin temelini oluşturur.</p>
+                </div>
+            </div>
+            <div class="sss-item">
+                <button class="sss-soru" onclick="toggleSSS('cevap3')">Mirror Cube normal 3x3'ten farklı mı çözülüyor?</button>
+                <div id="cevap3" class="sss-cevap">
+                    <p>Hayır! Aynı algoritmalar kullanılır. Tek fark: renk yerine parça boyutuna bakarsınız.</p>
+                </div>
+            </div>
+            <div class="sss-item">
+                <button class="sss-soru" onclick="toggleSSS('cevap4')">Speedcubing nedir?</button>
+                <div id="cevap4" class="sss-cevap">
+                    <p>Zeka küplerini en kısa sürede çözmeye dayanan rekabetçi aktivitedir. WCA tarafından düzenlenir.</p>
+                </div>
+            </div>
+            <div class="sss-item">
+                <button class="sss-soru" onclick="toggleSSS('cevap5')">Küpümü yağlamalı mıyım?</button>
+                <div id="cevap5" class="sss-cevap">
+                    <p>Evet! Silikon bazlı küp yağı küpünüzün pürüzsüz dönmesini sağlar ve ömrünü uzatır.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="baglanti-bolum">
+            <h2>🔗 Faydalı Bağlantılar</h2>
+            <ul class="baglanti-listesi">
+                <li><a href="https://www.worldcubeassociation.org/" target="_blank">🌍 World Cube Association (WCA)</a></li>
+                <li><a href="https://jperm.net/" target="_blank">📚 J Perm — Algoritma Veritabanı</a></li>
+                <li><a href="mailto:info@zekakupleri.com">📧 Bize E-posta Gönderin</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-icerik">
+            <p>&copy; 2025 Zeka Küpleri Çözüm Rehberi — Web Tasarımı Dersi Ödevi</p>
+            <p><a href="#sayfa-basi" class="yukari-link">⬆ Sayfa Başına Dön</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zeka küpleri ile ilgili sorularınızı bize iletin">
+    <title>Zeka Küpleri Çözüm Rehberi | İletişim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="sayfa-basi">
+        <div class="header-icerik">
+            <h1>📬 İletişim & Yardım İste</h1>
+            <p class="slogan">Takıldığınız yerde size yardımcı olalım</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">🏠 Ana Sayfa</a></li>
+            <li><a href="kupler.html">🎲 Küp Türleri</a></li>
+            <li><a href="cozumler.html">📖 Çözüm Rehberi</a></li>
+            <li><a href="iletisim.html" class="aktif">📬 İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="tema-cubuk">
+        <span>🎨 Tema:</span>
+        <button id="btn-aydinlik" class="tema-btn aydinlik-btn">☀️ Aydınlık</button>
+        <button id="btn-karanlik" class="tema-btn karanlik-btn">🌙 Karanlık</button>
+        <button id="btn-mavi" class="tema-btn mavi-btn">🔵 Mavi</button>
+        <button id="btn-yesil" class="tema-btn yesil-btn">🟢 Yeşil</button>
+        <span id="tema-mesaj" class="tema-mesaj"></span>
+    </div>
+
+    <main>
+
+        <section class="iletisim-bilgi">
+            <h2>📞 İletişim Bilgileri</h2>
+            <div class="bilgi-kartlari">
+                <div class="bilgi-karti">
+                    <h3>📧 E-posta</h3>
+                    <p><a href="mailto:info@zekakupleri.com">info@zekakupleri.com</a></p>
+                </div>
+                <div class="bilgi-karti">
+                    <h3>📱 Sosyal Medya</h3>
+                    <p>Instagram: @zekakupleri</p>
+                </div>
+                <div class="bilgi-karti">
+                    <h3>⏰ Yanıt Süresi</h3>
+                    <p>24-48 saat içinde yanıt</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="form-bolum">
+            <h2>🆘 Yardım İste — İletişim Formu</h2>
+            <p>Küp çözerken takıldığınız adımı aşağıdaki formla bize iletin.</p>
+
+            <form id="iletisim-formu" class="iletisim-formu" onsubmit="return formKontrol()">
+
+                <div class="form-grup">
+                    <label for="ad-soyad">👤 Adınız Soyadınız: <span class="zorunlu">*</span></label>
+                    <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Adınızı yazın" required>
+                </div>
+
+                <div class="form-grup">
+                    <label for="email">📧 E-posta: <span class="zorunlu">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
+                </div>
+
+                <div class="form-grup">
+                    <label for="sifre">🔒 Üyelik Şifresi (opsiyonel):</label>
+                    <input type="password" id="sifre" name="sifre" placeholder="En az 6 karakter">
+                </div>
+
+                <div class="form-grup">
+                    <label>📊 Deneyim Seviyeniz: <span class="zorunlu">*</span></label>
+                    <div class="radio-grup">
+                        <label class="radio-label"><input type="radio" name="deneyim" value="baslangic" required> 🟢 Başlangıç</label>
+                        <label class="radio-label"><input type="radio" name="deneyim" value="orta"> 🟡 Orta</label>
+                        <label class="radio-label"><input type="radio" name="deneyim" value="ileri"> 🟠 İleri</label>
+                        <label class="radio-label"><input type="radio" name="deneyim" value="uzman"> 🔴 Uzman</label>
+                    </div>
+                </div>
+
+                <div class="form-grup">
+                    <label>🎲 Sahip Olduğunuz Küpler:</label>
+                    <div class="checkbox-grup">
+                        <label class="checkbox-label"><input type="checkbox" name="kupler" value="2x2"> 2x2</label>
+                        <label class="checkbox-label"><input type="checkbox" name="kupler" value="3x3"> 3x3</label>
+                        <label class="checkbox-label"><input type="checkbox" name="kupler" value="4x4"> 4x4</label>
+                        <label class="checkbox-label"><input type="checkbox" name="kupler" value="mirror"> Mirror Cube</label>
+                        <label class="checkbox-label"><input type="checkbox" name="kupler" value="pyraminx"> Pyraminx</label>
+                        <label class="checkbox-label"><input type="checkbox" name="kupler" value="megaminx"> Megaminx</label>
+                        <label class="checkbox-label"><input type="checkbox" name="kupler" value="diger"> Diğer</label>
+                    </div>
+                </div>
+
+                <div class="form-grup">
+                    <label for="takildi-adim">🔧 Hangi Adımda Takıldınız?</label>
+                    <select id="takildi-adim" name="takildi-adim">
+                        <option value="">-- Seçin --</option>
+                        <option value="beyaz-hac">Beyaz Haç</option>
+                        <option value="beyaz-koseler">Beyaz Köşeler</option>
+                        <option value="orta-katman">Orta Katman</option>
+                        <option value="sari-hac">Sarı Haç</option>
+                        <option value="sari-yuz">Sarı Yüz</option>
+                        <option value="son-katman">Son Katman</option>
+                        <option value="mirror">Mirror Cube</option>
+                        <option value="diger-kup">Farklı Küp</option>
+                        <option value="genel">Genel Soru</option>
+                    </select>
+                </div>
+
+                <div class="form-grup">
+                    <label for="mesaj">💬 Mesajınız: <span class="zorunlu">*</span></label>
+                    <textarea id="mesaj" name="mesaj" rows="6" placeholder="Sorununuzu detaylı açıklayın..." required></textarea>
+                </div>
+
+                <div class="form-grup">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="bulten" value="evet"> 📰 Yeni rehberlerden haberdar olmak istiyorum
+                    </label>
+                </div>
+
+                <div class="form-butonlar">
+                    <button type="submit" class="form-btn gonder-btn">📤 Gönder</button>
+                    <button type="reset" class="form-btn temizle-btn">🔄 Temizle</button>
+                </div>
+
+            </form>
+
+            <div id="form-sonuc" class="form-sonuc"></div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="geri-bildirim-bolum">
+            <h2>⭐ Sitemizi Değerlendirin</h2>
+            <div class="degerlendirme-butonlari">
+                <button class="deger-btn" onclick="degerlendir('Çok Beğendim! 🤩')">🤩 Harika</button>
+                <button class="deger-btn" onclick="degerlendir('Güzel! 😊')">😊 İyi</button>
+                <button class="deger-btn" onclick="degerlendir('Fena değil 😐')">😐 Orta</button>
+                <button class="deger-btn" onclick="degerlendir('Geliştirilebilir 😕')">😕 Geliştirilebilir</button>
+            </div>
+            <p id="deger-sonuc" class="deger-sonuc"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-icerik">
+            <p>&copy; 2025 Zeka Küpleri Çözüm Rehberi</p>
+            <p>
+                <a href="index.html">Ana Sayfa</a> |
+                <a href="cozumler.html">Çözümler</a> |
+                <a href="#sayfa-basi" class="yukari-link">⬆ Yukarı</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

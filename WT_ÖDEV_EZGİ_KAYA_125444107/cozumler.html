@@ -1,0 +1,504 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tüm zeka küplerinin adım adım çözüm rehberi">
+    <title>Zeka Küpleri Çözüm Rehberi | Çözümler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="sayfa-basi">
+        <div class="header-icerik">
+            <h1>📖 Adım Adım Çözüm Rehberi</h1>
+            <p class="slogan">Tüm küplerin çözümü tek sayfada</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">🏠 Ana Sayfa</a></li>
+            <li><a href="kupler.html">🎲 Küp Türleri</a></li>
+            <li><a href="cozumler.html" class="aktif">📖 Çözüm Rehberi</a></li>
+            <li><a href="iletisim.html">📬 İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="tema-cubuk">
+        <span>🎨 Tema:</span>
+        <button id="btn-aydinlik" class="tema-btn aydinlik-btn">☀️ Aydınlık</button>
+        <button id="btn-karanlik" class="tema-btn karanlik-btn">🌙 Karanlık</button>
+        <button id="btn-mavi" class="tema-btn mavi-btn">🔵 Mavi</button>
+        <button id="btn-yesil" class="tema-btn yesil-btn">🟢 Yeşil</button>
+        <span id="tema-mesaj" class="tema-mesaj"></span>
+    </div>
+
+    <main>
+
+        <section class="icindekiler">
+            <h2>📑 Hızlı Erişim</h2>
+            <ul class="icerik-listesi">
+                <li><a href="#cozum-2x2">🟩 2x2 Çözümü</a></li>
+                <li><a href="#cozum-3x3">🟦 3x3 Çözümü</a></li>
+                <li><a href="#cozum-4x4">🟧 4x4 Çözümü</a></li>
+                <li><a href="#cozum-mirror">🪞 Mirror Cube</a></li>
+                <li><a href="#cozum-pyraminx">🔺 Pyraminx</a></li>
+                <li><a href="#cozum-megaminx">⬟ Megaminx</a></li>
+                <li><a href="#cozum-kilominx">⬠ Kilominx</a></li>
+                <li><a href="#cozum-skewb">💎 Skewb</a></li>
+            </ul>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="notasyon-bolum">
+            <h2>🔤 Küp Notasyonu</h2>
+            <table class="notasyon-tablo">
+                <thead>
+                    <tr><th>Harf</th><th>Yüz</th><th>Yön</th><th>Açıklama</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>R</strong></td><td>Sağ</td><td>Saat yönü</td><td>Sağ yüzü 90° döndür</td></tr>
+                    <tr><td><strong>R'</strong></td><td>Sağ</td><td>Ters</td><td>Sağ yüzü ters döndür</td></tr>
+                    <tr><td><strong>L</strong></td><td>Sol</td><td>Saat yönü</td><td>Sol yüzü 90° döndür</td></tr>
+                    <tr><td><strong>U</strong></td><td>Üst</td><td>Saat yönü</td><td>Üst yüzü 90° döndür</td></tr>
+                    <tr><td><strong>D</strong></td><td>Alt</td><td>Saat yönü</td><td>Alt yüzü 90° döndür</td></tr>
+                    <tr><td><strong>F</strong></td><td>Ön</td><td>Saat yönü</td><td>Ön yüzü 90° döndür</td></tr>
+                    <tr><td><strong>B</strong></td><td>Arka</td><td>Saat yönü</td><td>Arka yüzü 90° döndür</td></tr>
+                </tbody>
+            </table>
+            <p><em><strong>'</strong> = ters yön, <strong>2</strong> = 180° (örn: R2)</em></p>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-2x2" class="cozum-bolum">
+            <h2>🟩 2x2 POCKET KÜP ÇÖZÜMÜ</h2>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: Birinci Yüzü Çözme</h3>
+                <div class="adim-icerik">
+                    <p>Beyaz yüzü çözün. 4 beyaz köşeyi doğru pozisyona yerleştirin.</p>
+                    <p>Algoritma: <span class="algoritma">R U R' U'</span> (oturana kadar tekrarlayın)</p>
+                    <p><mark>Köşenin sadece beyaz yüzü değil, yan renkleri de eşleşmeli!</mark></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: Üst Yüz (OLL)</h3>
+                <div class="adim-icerik">
+                    <p>Üst köşelerin hepsini sarı yapın.</p>
+                    <p>Algoritma: <span class="algoritma">R U R' U R U2 R'</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: Köşe Konumlandırma (PLL)</h3>
+                <div class="adim-icerik">
+                    <p>Köşeleri doğru pozisyona yerleştirin.</p>
+                    <p>Algoritma: <span class="algoritma">R U' L' U R' U' L U</span></p>
+                    <p class="tebrikler">🎉 2x2 çözüldü!</p>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/" target="_blank">J Perm — Algoritma Veritabanı</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA — Resmi Kaynak</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-3x3" class="cozum-bolum">
+            <h2>🟦 3x3 RUBİK KÜPÜ ÇÖZÜMÜ</h2>
+            <p><strong>Layer by Layer</strong> yöntemiyle 7 adımda çözüm:</p>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: Beyaz Haç</h3>
+                <div class="adim-icerik">
+                    <p>Beyaz yüzde haç oluşturun. Kenarların yan renkleri merkez renkleriyle eşleşmeli.</p>
+                    <p><mark>Bu adım sezgiseldir. Pratikle hızlanırsınız.</mark></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: Beyaz Köşeler</h3>
+                <div class="adim-icerik">
+                    <p>Algoritmayı köşe oturana kadar tekrarlayın:</p>
+                    <p><span class="algoritma">R U R' U'</span> (1-5 kez)</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: Orta Katman Kenarları</h3>
+                <div class="adim-icerik">
+                    <p>Küpü ters çevirin (beyaz alt). Orta katman kenarlarını yerleştirin.</p>
+                    <p>Sağa: <span class="algoritma">U R U' R' U' F' U F</span></p>
+                    <p>Sola: <span class="algoritma">U' L' U L U F U' F'</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 4: Sarı Haç</h3>
+                <div class="adim-icerik">
+                    <p><span class="algoritma">F R U R' U' F'</span></p>
+                    <ul>
+                        <li>Nokta → 3 kez uygula</li>
+                        <li>L şekli → 2 kez uygula</li>
+                        <li>Çizgi → 1 kez uygula</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 5: Sarı Yüz Tamamlama (OLL)</h3>
+                <div class="adim-icerik">
+                    <p><span class="algoritma">R U R' U R U2 R'</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 6: Köşe Konumlandırma</h3>
+                <div class="adim-icerik">
+                    <p><span class="algoritma">U R U' L' U R' U' L</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 7: Kenar Konumlandırma — SON ADIM!</h3>
+                <div class="adim-icerik">
+                    <p>Saat yönü: <span class="algoritma">R U' R U R U R U' R' U' R2</span></p>
+                    <p>Ters yön: <span class="algoritma">R2 U R U R' U' R' U' R' U R'</span></p>
+                    <p class="tebrikler">🏆 3x3 Rubik Küpü çözüldü!</p>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/3x3" target="_blank">J Perm — 3x3 Rehber</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-4x4" class="cozum-bolum">
+            <h2>🟧 4x4 RUBİK KÜPÜ ÇÖZÜMÜ</h2>
+            <p><strong>Reduction (İndirgeme)</strong> yöntemi:</p>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: Merkezleri Oluşturma</h3>
+                <div class="adim-icerik">
+                    <p>Her yüzde 4 merkez parçasını bir araya getirin. Karşı renkler: Beyaz-Sarı, Kırmızı-Turuncu, Mavi-Yeşil.</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: Kenarları Eşleştirme</h3>
+                <div class="adim-icerik">
+                    <p>Her kenar çiftini birleştirin:</p>
+                    <p><span class="algoritma">Uw' (R U R') Uw</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: 3x3 Gibi Çözme</h3>
+                <div class="adim-icerik">
+                    <p>Merkezler ve kenarlar tamam → artık 3x3 gibi çözün!</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 4: Parite Hataları (4x4'e Özgü!)</h3>
+                <div class="adim-icerik">
+                    <p><strong>OLL Parity:</strong> <span class="algoritma">r U2 x r U2 r U2 r' U2 l U2 r' U2 r U2 r' U2 r'</span></p>
+                    <p><strong>PLL Parity:</strong> <span class="algoritma">2R2 U2 2R2 Uw2 2R2 Uw2</span></p>
+                    <p class="tebrikler">🎉 4x4 çözüldü!</p>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/" target="_blank">J Perm — Algoritma Veritabanı</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-mirror" class="cozum-bolum">
+            <h2>🪞 MIRROR CUBE ÇÖZÜMÜ</h2>
+            <p>3x3 ile <strong>birebir aynı algoritmalar</strong>. Tek fark: renk yerine <strong>parça boyutuna</strong> bakarsınız!</p>
+
+            <div class="cozum-adim">
+                <h3>Hazırlık: Parçaları Tanıma</h3>
+                <div class="adim-icerik">
+                    <ul>
+                        <li><strong>Merkezler:</strong> 6 merkez farklı kalınlıkta. En kalın = alt yüz olsun</li>
+                        <li><strong>Kenarlar:</strong> Her kenar benzersiz boyutta</li>
+                        <li><strong>Köşeler:</strong> Her köşe benzersiz boyutta</li>
+                        <li><strong>Hedef:</strong> Parçalar yerine oturduğunda düzgün küp şekli oluşur</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: Haç (Boyuta Göre)</h3>
+                <div class="adim-icerik">
+                    <p>En kalın merkezi alta koyun. Bu merkeze boyut olarak uyan 4 kenarı bulup haç yapın.</p>
+                    <p><mark>Zorlandığınızda parçayı deneme olarak yerine koyun, düz oturuyorsa doğrudur.</mark></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: Alt Köşeler</h3>
+                <div class="adim-icerik">
+                    <p><span class="algoritma">R U R' U'</span> (oturana kadar tekrarlayın)</p>
+                    <p>Köşe düz oturmalı, çıkıntı yapmamalı.</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: Orta Katman</h3>
+                <div class="adim-icerik">
+                    <p>Sağa: <span class="algoritma">U R U' R' U' F' U F</span></p>
+                    <p>Sola: <span class="algoritma">U' L' U L U F U' F'</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 4-7: Son Katman (3x3 ile Aynı)</h3>
+                <div class="adim-icerik">
+                    <ol>
+                        <li>Üst haç: <span class="algoritma">F R U R' U' F'</span></li>
+                        <li>Üst yüz: <span class="algoritma">R U R' U R U2 R'</span></li>
+                        <li>Köşe konum: <span class="algoritma">U R U' L' U R' U' L</span></li>
+                        <li>Kenar konum: <span class="algoritma">R U' R U R U R U' R' U' R2</span></li>
+                    </ol>
+                    <p class="tebrikler">🪞 Mirror Cube çözüldü! Düzgün küp şekli geri geldi!</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>💡 Mirror Cube İpuçları</h3>
+                <div class="adim-icerik">
+                    <ul>
+                        <li>Parçaları <strong>elle dokunarak</strong> tanımak daha kolaydır</li>
+                        <li>En ince ve en kalın parçaları önce yerleştirin</li>
+                        <li>3x3 bilmeden Mirror Cube'a başlamayın</li>
+                        <li>Gözleri kapatıp dokunarak bile çözülebilir!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/" target="_blank">J Perm — Algoritma Veritabanı</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-pyraminx" class="cozum-bolum">
+            <h2>🔺 PYRAMINX ÇÖZÜMÜ</h2>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: Uçları Çevirme</h3>
+                <div class="adim-icerik">
+                    <p>4 uç noktasını kendi merkez rengiyle eşleştirin. Algoritma gerektirmez — sadece çevirin!</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: İlk Katmanı Çözme</h3>
+                <div class="adim-icerik">
+                    <p>Alt üçgen yüzü tamamen çözün. Sezgisel olarak parçaları yerine oturtun.</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: Son Katman</h3>
+                <div class="adim-icerik">
+                    <p>Kalan 3 kenarı çözün:</p>
+                    <p><span class="algoritma">R U' R' U R U' R'</span></p>
+                    <p class="tebrikler">🔺 Pyraminx çözüldü!</p>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/" target="_blank">J Perm</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-megaminx" class="cozum-bolum">
+            <h2>⬟ MEGAMINX ÇÖZÜMÜ</h2>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: Yıldız — İlk Yüz Kenarları</h3>
+                <div class="adim-icerik">
+                    <p>Bir yüzde 5 kenarı yerleştirerek yıldız oluşturun. Sezgisel adım.</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: İlk Yüz Köşeleri</h3>
+                <div class="adim-icerik">
+                    <p><span class="algoritma">R U R' U'</span> — köşe oturana kadar</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: Orta Katmanlar (5-6 kez tekrar)</h3>
+                <div class="adim-icerik">
+                    <p>F2L algoritması: <span class="algoritma">U R U' R' U' F' U F</span></p>
+                    <p>Her katmanı tamamladıktan sonra bir sonraki yüze geçin.</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 4: Son Yüz</h3>
+                <div class="adim-icerik">
+                    <ol>
+                        <li>Yıldız: <span class="algoritma">F R U R' U' F'</span></li>
+                        <li>Köşe yön: <span class="algoritma">R U R' U R U2 R'</span></li>
+                        <li>Köşe konum: <span class="algoritma">U R U' L' U R' U' L</span></li>
+                        <li>Kenar konum: <span class="algoritma">R U' R U R U R U' R' U' R2</span></li>
+                    </ol>
+                    <p class="tebrikler">⬟ Megaminx çözüldü!</p>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/" target="_blank">J Perm</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-kilominx" class="cozum-bolum">
+            <h2>⬠ KILOMINX ÇÖZÜMÜ</h2>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: İlk Yüz</h3>
+                <div class="adim-icerik">
+                    <p>Bir yüzün 5 köşesini yerleştirin: <span class="algoritma">R U R' U'</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: Orta Katman Köşeleri</h3>
+                <div class="adim-icerik">
+                    <p>Katman katman köşeleri yerleştirin. 3x3 köşe algoritmasıyla ilerleyin.</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: Son Yüz</h3>
+                <div class="adim-icerik">
+                    <p>OLL: <span class="algoritma">R U R' U R U2 R'</span></p>
+                    <p>PLL: <span class="algoritma">R U' L' U R' U' L U</span></p>
+                    <p class="tebrikler">⬠ Kilominx çözüldü!</p>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/" target="_blank">J Perm</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section id="cozum-skewb" class="cozum-bolum">
+            <h2>💎 SKEWB ÇÖZÜMÜ</h2>
+
+            <div class="cozum-adim">
+                <h3>Adım 1: Bir Yüzü Çözme</h3>
+                <div class="adim-icerik">
+                    <p>Beyaz yüzü çözün (4 köşe + 1 merkez). Sezgisel adım.</p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 2: Merkezleri Yerleştirme</h3>
+                <div class="adim-icerik">
+                    <p>Sledgehammer: <span class="algoritma">R' L R L'</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 3: Üst Köşe Konumlandırma</h3>
+                <div class="adim-icerik">
+                    <p><span class="algoritma">R L' R' L R L' R' L</span></p>
+                </div>
+            </div>
+
+            <div class="cozum-adim">
+                <h3>Adım 4: Üst Köşe Yönlendirme</h3>
+                <div class="adim-icerik">
+                    <p><span class="algoritma">R' L R L'</span> + üst yüz rotasyonu</p>
+                    <p class="tebrikler">💎 Skewb çözüldü!</p>
+                </div>
+            </div>
+
+            <div class="kaynak-kutusu">
+                <p>📚 Ek kaynaklar:</p>
+                <ul>
+                    <li><a href="https://jperm.net/" target="_blank">J Perm</a></li>
+                    <li><a href="https://www.worldcubeassociation.org/" target="_blank">WCA</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="ayirici">
+
+        <section class="pratik-bolum">
+            <h2>📈 Pratik Sayacı</h2>
+            <p>Her çözüm yaptığınızda butona basın:</p>
+            <div class="pratik-alan">
+                <button id="btn-pratik" class="pratik-btn">✅ Çözüm Tamamlandı!</button>
+                <p id="pratik-sayi" class="pratik-sayi">Toplam çözüm: 0</p>
+                <button id="btn-pratik-sifirla" class="pratik-sifirla-btn">🔄 Sıfırla</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-icerik">
+            <p>&copy; 2025 Zeka Küpleri Çözüm Rehberi</p>
+            <p>
+                <a href="index.html">Ana Sayfa</a> |
+                <a href="kupler.html">Küp Türleri</a> |
+                <a href="iletisim.html">İletişim</a> |
+                <a href="#sayfa-basi" class="yukari-link">⬆ Yukarı</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
